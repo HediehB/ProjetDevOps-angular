@@ -13,10 +13,21 @@ export class ListeProduitComponent implements OnInit {
 
   constructor(private http: HttpClient) {}
 
-  ngOnInit(): void {
+  /*ngOnInit(): void {
     this.http.get(`${environment.apiUrl}/produits`).subscribe(data => {
       this.produits = data as any[];
     });
+  }*/
+
+  ngOnInit(): void {
+    this.http.get<any[]>(`${environment.apiUrl}/produits`).subscribe(
+      data => {
+        this.produits = data;
+      },
+      error => {
+        console.error('Erreur lors de la récupération des produits', error);
+      }
+    );
   }
 
 }

@@ -14,6 +14,22 @@ export class AjoutProduitComponent {
   constructor(private http: HttpClient) {}
 
   ajouterProduit(): void {
-    this.http.post(`${environment.apiUrl}/produits`, this.produit).subscribe();
+
+    if (this.produit.nom && this.produit.prix) {
+      
+      this.http.post(`${environment.apiUrl}/produits`, this.produit).subscribe(
+        response => {
+          console.log('Produit ajouté avec succès', response);
+          // Réinitialiser le formulaire après l'ajout du produit
+          this.produit = { nom: '', prix: '' };
+        },
+        error => {
+          console.error('Erreur lors de l\'ajout du produit', error);
+        }
+      );
+    } else {
+      console.warn('Les champs nom et prix sont obligatoires.');
+    }
   }
+
 }

@@ -5,6 +5,7 @@
     margin: 0 auto;
     padding: 20px;
     text-align: center;
+    background-color: #E6DAC6;
   }
   
   .home-container h1 {
@@ -25,5 +26,6 @@
   .home-container ul li {
     font-size: 1.1em;
     margin-bottom: 10px;
+  
   }
   

@@ -1,8 +1,19 @@
-<div>
-    <h2>Liste des produits</h2>
-    <ul>
-      <li *ngFor="let produit of produits">
-        {{ produit.id }} - {{ produit.name }} - {{ produit.price }} €
-      </li>
-    </ul>
-  </div>
+<div class="liste-produit-container">
+  <h2>Liste des Produits</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Prix</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let produit of produits">
+        <td>{{ produit.id }}</td>
+        <td>{{ produit.nom }}</td>
+        <td>{{ produit.prix }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
