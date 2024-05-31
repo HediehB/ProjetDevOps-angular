@@ -80,4 +80,3 @@ jobs:
           context: .
           push: true
           tags: hedi77/ajc-ci:angular-devops
-
