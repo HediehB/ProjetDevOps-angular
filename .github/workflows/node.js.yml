@@ -43,7 +43,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: app-ng
-          path: dist/projetDevOps-angular/browser
+          path: dist/projet-dev-ops-angular/browser
 
   docker:
     needs: build
