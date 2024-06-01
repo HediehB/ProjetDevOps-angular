@@ -20,7 +20,7 @@ export class ListeProduitComponent implements OnInit {
   }*/
 
   ngOnInit(): void {
-    this.http.get<any[]>(`${environment.apiUrl}/produits`).subscribe(
+    this.http.get<any[]>(`${environment.apiUrl}/produit`).subscribe(
       data => {
         this.produits = data;
       },

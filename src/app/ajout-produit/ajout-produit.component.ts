@@ -17,7 +17,7 @@ export class AjoutProduitComponent {
 
     if (this.produit.nom && this.produit.prix) {
       
-      this.http.post(`${environment.apiUrl}/produits`, this.produit).subscribe(
+      this.http.post(`${environment.apiUrl}/produit/ajout`, this.produit).subscribe(
         response => {
           console.log('Produit ajouté avec succès', response);
           // Réinitialiser le formulaire après l'ajout du produit
