@@ -29,11 +29,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
           
-      # - name: Configuration des variables d'environnement
-      #   run: |
-      #     echo "export const environment = { production: false, apiUrl: '${{ secrets.DEV_API_URL }}' };" > src/environments/environment.ts
-      #     echo "export const environment = { production: true, apiUrl: '${{ secrets.PROD_API_URL }}' };" > src/environments/environment.prod.ts
-
       - name: Build de Angular
         run: |
           npm install
